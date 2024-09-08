@@ -18,6 +18,9 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+    - name: Debug - List files
+      run: ls -la
+
     - name: Sync files to Droplet
       run: rsync -avz -e "ssh -o StrictHostKeyChecking=no" --exclude='.git*' ./ root@192.81.211.96:/var/www/html/
 
