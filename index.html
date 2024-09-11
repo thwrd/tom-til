@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algorithm Learning Journey</title>
+    <title>tom-til</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/light.css">
@@ -14,45 +14,28 @@
 
 <body>
     <div class="container">
-        <h1>My Algorithm Learning Journey</h1>
-        <p>Welcome to my journey of learning algorithms! Below is my educational plan and some interactive code samples.
-        </p>
+        <h1>tom-til</h1>
 
-        <h2>Educational Plan</h2>
+        <p>Welcome to my website! Here's a quick overview of who I am:</p>
         <ul>
-            <li>Week 1: Basics of Sorting Algorithms</li>
-            <li>Week 2: Search Algorithms</li>
-            <li>Week 3: Dynamic Programming</li>
-            <li>Week 4: Graph Algorithms</li>
-            <li>This line was deployed using a github action!</li>
+            <li>Piano enthusiast - I practice almost daily.</li>
+            <li>Professional Android developer.</li>
+            <li>Marathon trainee (as of September 10, 2024).</li>
+            <li>Living with my girlfriend and our dog.</li>
+            <li>Managing ulcerative colitis.</li>
+            <li>Following a paleo diet, which has helped me overcome asthma.</li>
         </ul>
-
-        <h2>Interactive Code Sample</h2>
-        <p>Try out this code snippet:</p>
-        <pre><code id="codeSample">function bubbleSort(arr) {
-            for (let i = 0; i < arr.length; i++) {
-                for (let j = 0; j < arr.length - i - 1; j++) {
-                    if (arr[j] > arr[j + 1]) {
-                        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-                    }
-                }
-            }
-            return arr;
-        }
         
-        console.log(bubbleSort([5, 3, 8, 4, 2]));
-        </code></pre>
-        <button onclick="runCode()" class="btn btn-primary">Run Code</button>
-        <p>Output: <span id="output"></span></p>
-    </div>
-
-    <script>
-        function runCode() {
-            const code = document.getElementById('codeSample').textContent;
-            const output = eval(code);
-            document.getElementById('output').textContent = output;
-        }
-    </script>
+        <h2>Blog</h2>
+        <article>
+            <h3>Blog Post Title</h2>
+            <p>Posted on <time datetime="2024-09-10">September 10, 2024</time> by <a href="#">Author</a></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac libero id ligula fermentum
+                interdum.</p>
+            <p>Vivamus nec magna auctor, dictum purus in, vehicula lectus. Aenean imperdiet, felis non fringilla varius,
+                nisi lectus sollicitudin leo, vel consectetur libero justo in arcu.</p>
+            <a href="#">Read more...</a>
+        </article>
 </body>
 
 </html>
