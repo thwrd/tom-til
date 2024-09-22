@@ -1,3 +1,19 @@
+/* Font usage */
+body {
+    font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fira Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+code, pre {
+    font-family: 'Roboto Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+/* Existing styles */
 .dolb article {
     margin-bottom: 2rem;
     padding-bottom: 1rem;
@@ -20,28 +36,15 @@ code {
     padding: 0.1em 0.2em;
 }
 
-h1::before {
-    content: "# ";
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+    font-weight: bold;
 }
 
-h2::before {
-    content: "## ";
-}
-
-h3::before {
-    content: "### ";
-}
-
-h4::before {
-    content: "#### ";
-}
-
-h5::before {
-    content: "##### ";
-}
-
-h6::before {
-    content: "###### ";
-}
+h1::before { content: "# "; }
+h2::before { content: "## "; }
+h3::before { content: "### "; }
+h4::before { content: "#### "; }
+h5::before { content: "##### "; }
+h6::before { content: "###### "; }
 
 /* Add other common styles here */
