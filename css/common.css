@@ -1,0 +1,47 @@
+.dolb article {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.dolb article:last-child {
+    border-bottom: none;
+}
+
+pre {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+    line-height: 1.4;
+    overflow-x: auto;
+}
+
+code {
+    padding: 0.1em 0.2em;
+}
+
+h1::before {
+    content: "# ";
+}
+
+h2::before {
+    content: "## ";
+}
+
+h3::before {
+    content: "### ";
+}
+
+h4::before {
+    content: "#### ";
+}
+
+h5::before {
+    content: "##### ";
+}
+
+h6::before {
+    content: "###### ";
+}
+
+/* Add other common styles here */
