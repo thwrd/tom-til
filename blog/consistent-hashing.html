@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Consistent Hashing - tom-til</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/light.css">
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="../css/dark.css">
+    <script src="https://unpkg.com/kotlin-playground@1" data-selector="code"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="../index.html">← Home</a>
+        </nav>
+
+        <article>
+            <h1>Understanding Consistent Hashing</h1>
+            <p>Posted on <time datetime="2024-03-21">March 21, 2024</time> by <a href="#">Tom</a></p>
+
+            <h2>Introduction</h2>
+            <p>Consistent hashing is a distributed hashing scheme that operates independently of the number of servers
+                or objects in a distributed hash table.</p>
+
+            <h2>The Problem</h2>
+            <p>In traditional hash tables, when the number of slots changes, most keys need to be remapped. This is
+                particularly problematic in distributed systems where nodes can come and go frequently.</p>
+
+            <h2>How Consistent Hashing Works</h2>
+            <p>Consistent hashing maps both servers and keys to the same space...</p>
+
+            <h2>Implementation Example</h2>
+            <pre><code>
+fun createHashRing(nodes: List<String>): SortedMap<Int, String> {
+    val hashRing = sortedMapOf<Int, String>()
+    nodes.forEach { node ->
+        val hash = node.hashCode()
+        hashRing[hash] = node
+    }
+    return hashRing
+}
+            </code></pre>
+
+            <h2>Applications</h2>
+            <ul>
+                <li>Distributed Caching Systems (e.g., Memcached)</li>
+                <li>Load Balancers</li>
+                <li>Content Delivery Networks (CDNs)</li>
+            </ul>
+
+            <h2>Further Reading</h2>
+            <ul>
+                <li><a href="#">Original Consistent Hashing Paper</a></li>
+                <li><a href="#">Implementation in Redis</a></li>
+                <li><a href="#">Real-world Applications</a></li>
+            </ul>
+        </article>
+    </div>
+</body>
+
+</html>
